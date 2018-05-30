@@ -1,0 +1,15 @@
+syntax = "proto3";
+package math;
+service Math {
+    rpc Div(Request) returns (Response) {}
+}
+
+message Request {
+    int64 dividend = 1;
+    int64 divisor = 2;
+}
+
+message Response {
+    int64 quotient = 1;
+    int64 remainder = 2;
+}
